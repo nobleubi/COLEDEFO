@@ -12,20 +12,24 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="site-header">
-      <h1>COLEDEFO</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="whatwedo.html">What We Do</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        <!-- Donate Button in Header -->
-        <a href="#" class="donate-header-btn">Donate</a>
-      </nav>
-    </header>
+<nav class="navbar">
+  <div class="logo">COLEDEFO</div>
+
+  <!-- Hamburger Icon (always visible) -->
+  <div class="menu-icon" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="whatwedo.html">What We Do</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
 <!-- modify this form HTML and place wherever you want your form -->
 <!-- Contact Form Section -->
@@ -52,6 +56,15 @@
       <button type="submit">Send</button>
     </form>
 </section>
+
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
 
     </body>
 </html>

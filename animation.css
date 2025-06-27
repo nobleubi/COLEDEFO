@@ -1,0 +1,240 @@
+/* General Fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide in from left */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.8s ease;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide in from right */
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.8s ease;
+}
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hero animation */
+.hero {
+  background: url('images/annie-spratt-cVEOh_JJmEE-unsplash.jpg') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  animation: floatFade 2.5s ease forwards;
+  opacity: 0;
+  transform: translateY(40px);
+  max-width: 600px;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+@keyframes floatFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect on buttons */
+.hero-btn,
+.toggle-btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-btn:hover,
+.toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- ANIMATION KEYFRAMES --- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* --- GENERAL FADE EFFECT --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- ABOUT SECTION STYLING --- */
+.about-us {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  gap: 40px;
+}
+
+.about-video {
+  position: relative;
+  flex: 1 1 300px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.video-thumb {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.youtube-icon {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  font-size: 48px;
+  color: #ff0000;
+  animation: pop 1.5s infinite;
+}
+
+/* --- ABOUT TEXT --- */
+.about-text {
+  flex: 1 1 400px;
+  animation: fadeUp 1s ease forwards;
+}
+
+.about-text h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #2848d6;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.donate-header-btns {
+  background-color: #2848d6;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.donate-header-btns:hover {
+  background-color: #a61d1d;
+}
+
+/* --- MISSION/VISION SECTION --- */
+.our-mission-vision {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.our-mission-vision h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #222;
+  animation: fadeUp 1s ease forwards;
+}
+
+.mission-vision-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.mission, .vision {
+  background-color: #f2f2f2;
+  padding: 25px;
+  border-radius: 10px;
+  width: 300px;
+  animation: fadeUp 1s ease forwards;
+}
+
+.mission h3, .vision h3 {
+  color: #2848d6;
+  margin-bottom: 15px;
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .about-us {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text, .about-video {
+    max-width: 100%;
+  }
+  .youtube-icon {
+    font-size: 40px;
+    top: 40%;
+    left: 40%;
+  }
+}
+
+.goal-box:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.donate-btn:hover {
+  background-color: #123b9f;
+  transform: scale(1.05);
+}
+
+[data-aos] {
+  transition-property: opacity, transform;
+}
+

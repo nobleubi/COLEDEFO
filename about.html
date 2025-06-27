@@ -7,30 +7,33 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <title>COLEDEFO</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animation.css">
   </head>
   <body>
     <!-- Header -->
-    <header class="site-header">
-      <h1>COLEDEFO</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="whatwedo.html">What We Do</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        <!-- Donate Button in Header -->
-        <a href="#" class="donate-header-btn">Donate</a>
-      </nav>
-    </header>
+<nav class="navbar">
+  <div class="logo">COLEDEFO</div>
+
+  <!-- Hamburger Icon (always visible) -->
+  <div class="menu-icon" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="whatwedo.html">What We Do</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
     <!-- About Us Section -->
-    <section class="about-us">
+    <section class="about-us fade-in">
       <!-- Left Side: Video Thumbnail with YouTube Icon -->
       <div class="about-video">
         <a href="https://youtu.be/W4CKN9AzzlQ" target="_blank">
@@ -47,63 +50,70 @@
       <div class="about-text">
         <h2>ABOUT COLEDEFO</h2>
         <p>
-          Coledefo is a dynamic organization dedicated to addressing the unique
-        needs of women and the girl child. Our mission is to create a safe,
-        inclusive space where women can access essential resources, education,
-        and opportunities for personal and economic growth. At LACDEF, we
-        believe that when women and girls are empowered, entire communities
-        thrive. We focus on promoting gender equality, providing skill
-        acquisition programs, supporting education for the girl child, and
-        advocating for women’s rights. Through mentorship, leadership training,
-        and community outreach, we equip women with the tools to break barriers
-        and achieve their full potential. LACDEF remains committed to uplifting
-        women and girls, ensuring they become confident, independent, and
-        impactful members of society.
+          Women empowerment has been a long-standing issue, with which many
+          women around the world are facing challenges. Despite significant
+          progress in recent decades, disparities still exist in areas such as
+          education, healthcare, economic participation, and political
+          representation. In many communities, cultural norms and systemic
+          barriers continue to limit women's potential. For example, in many
+          parts of the world, girls still have limited access to quality
+          education, and women are underrepresented in leadership roles across
+          various sectors. We at COLEDEFO have bridged this barrier through
+          empowerment with skill acquisition and trainings. Our concerns for the
+          development of women and the girl child are based on long-term
+          benefits and results that are proving to be beneficial and profitable
+          globally. It's without reservation that the population of the female
+          gender is greater than the male counterpart, which cannot be
+          emphasized. Hence, the unending need to increase and intensify efforts
+          aimed at contributing our quota to the global agenda of empowering our
+          women in society.
         </p>
-
-         <!-- Donate Button in Header -->
         <a href="#" class="donate-header-btns">Donate</a>
       </div>
     </section>
 
     <!-- Our Values Section -->
-<section class="our-values">
-    <h2><strong>Our Values</strong></h2>
-    <p class="intro-text">At Coledefo, we live by five Core Values:</p>
-
-    <div class="values-list">
-        <p>Accountability</p>
-        <p>Integrity</p>
-        <p>Ambition</p>
-        <p>Collaboration</p>
-        <p>Creativity</p>
-    </div>
-
-    <p class="summary-text">
-        These Core Values drive our long-term strategies and short-term goals, 
-        and they underpin our mission to inspire breakthroughs in the way the world treats ladies 
-        and achieve immediate and lasting impact in their lives.
-    </p>
-</section>
-
-<!-- Footer Section -->
+    <section class="our-mission-vision fade-in">
+      <h2><strong>Our Mission and Vision</strong></h2>
+      <div class="mission-vision-container">
+        <div class="mission fade-in">
+          <h3>Our Mission</h3>
+          <p>
+            We are a charity organisation whose sole purpose of existence is to
+            liberate women and the girl child from poverty in our immediate
+            communities, state, and the country at large.
+          </p>
+        </div>
+        <div class="vision fade-in">
+          <h3>Our Vision</h3>
+          <p>
+            Our vision at COLEDEFO is to be at the forefront of selfless
+            services, innovative, technology-driven, and sustainable programs
+            with best global practices aimed at alleviating poverty among women
+            and the girl child.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
     <footer class="site-footer">
       <div class="footer-container">
         <!-- Left Column: Links + Contact + Donate -->
         <div class="footer-left">
           <ul class="footer-links">
-            <li><a href="about.html" class="footer-link learn-more">Learn More</a></li>
+            <li>
+              <a href="about.html" class="footer-link learn-more">Learn More</a>
+            </li>
             <li><a href="about.html" class="footer-link">About Us</a></li>
             <li><a href="whatwedo.html" class="footer-link">What We Do</a></li>
             <li><a href="contact.html" class="footer-link">Contact</a></li>
-
           </ul>
 
           <a href="#" class="donate-btn">Donate Now</a>
 
           <div class="contact-info">
             <a href="#" class="footer-link contact-link">Contact Us</a>
-            <p>Plot 7, Didi Mall, Sikiru Adewale Street, Sangoted</p>
+            <p>Plot 7, Didi Mall, Sikiru Adewale Street, Sangotedo</p>
             <p>Main Office: 0703 194 4092 | Mon-Fri 9:00am-5:00pm EST</p>
             <p>Report fraud, abuse, wrongdoing</p>
             <p>Safeguarding</p>
@@ -136,10 +146,36 @@
 
       <div class="footer-bottom">
         <p>
-          © 2024 Concerned Ladies Empowerment  And Development Forum, Inc. 501(c)(3). Gifts deductible
-          as per IRS regulations.
+          © 2024 Concerned Ladies Empowerment And Development Forum, Inc.
+          501(c)(3). Gifts deductible as per IRS regulations.
         </p>
       </div>
     </footer>
+
+    <script>
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
+<script>
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+</script>
+
   </body>
 </html>
