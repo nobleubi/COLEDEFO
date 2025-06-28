@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>COLEDEFO</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <header>
+      <nav class="navbar">
+        <div class="logo">COLEDEFO</div>
+
+        <!-- Hamburger Icon (always visible) -->
+        <div class="menu-icon" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="whatwedo.html">What We Do</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="team-gallery">
+      <h2>Meet Our Team</h2>
+      <div class="team-container">
+        <!-- Founder -->
+        <div class="team-member">
+          <img
+            src="images/IMG-20250628-WA0011.jpg"
+            alt="Founder"
+            class="profile-pic"
+          />
+          <h3>Shalom Gabriel</h3>
+          <p class="role">Founder</p>
+          <p class="bio">
+            Shalom Gabriel is the visionary founder of the Concerned Ladies
+            Empowerment and Development Forum. With a deep passion for justice
+            and equity, she played a key role in shaping the forum's mission—to
+            ensure that the girl child is given a fair voice in society and that
+            women are fully represented in politics, education, and leadership.
+            Through her dedication, the forum has championed training programs
+            and empowerment initiatives aimed at equipping women and girls with
+            the tools they need to thrive and lead.
+          </p>
+        </div>
+
+        <!-- Co-Founder -->
+        <div class="team-member">
+          <img
+            src="images/IMG-20250628-WA0012.jpg"
+            alt="Co-Founder"
+            class="profile-pic"
+          />
+          <h3>Princess Inyang</h3>
+          <p class="role">Co-Founder</p>
+          <p class="bio">
+            Princess Inyang is a devoted co founder of the Concerned Ladies
+            Empowerment and Development Forum. Inspired by the vision to uplift
+            women and girls, she has been instrumental in driving the mission
+            forward. Her commitment to giving the girl child a strong foundation
+            and equal opportunity to thrive has helped shape the forum’s
+            advocacy and outreach efforts. With a heart for impact, she
+            continues to support programs that empower women in all areas of
+            life.
+          </p>
+        </div>
+
+        <!-- National Coordinator -->
+        <div class="team-member">
+          <img
+            src="images/IMG-20250628-WA0013.jpg"
+            alt="National Coordinator"
+            class="profile-pic"
+          />
+          <h3>Ezeugo Ibeneme</h3>
+          <p class="role">National Coordinator</p>
+          <p class="bio">
+            Ezeugo Ibeneme serves as the National Coordinator of the Concerned
+            Ladies Empowerment and Development Forum. With a strong sense of
+            duty and compassion, he plays a vital role in organizing outreach
+            programs, especially in rural communities. He ensures that women and
+            girls in underserved areas have access to training, resources, and
+            support. From coordinating logistics to delivering empowerment
+            materials, Ezeugo is committed to seeing lives transformed through
+            practical engagement and community-driven impact.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="image-gallery">
+  <h2>Moments in Action</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item fade-in"><img src="images/IMG-20250626-WA0140.jpg" /></div>
+    <div class="gallery-item fade-in"><img src="images/IMG-20250626-WA0141.jpg" /></div>
+    <div class="gallery-item fade-in"><img src="images/IMG-20250626-WA0142.jpg" /></div>
+    <div class="gallery-item fade-in"><img src="images/IMG-20250626-WA0143.jpg" /></div>
+    <div class="gallery-item fade-in"><img src="images/IMG-20250626-WA0144.jpg" /></div>
+    <div class="gallery-item fade-in"><img src="images/IMG-20250620-WA0028.jpg" /></div>
+    <div class="gallery-item fade-in"><img src="images/IMG-20250628-WA0010.jpg" /></div>
+    <div class="gallery-item fade-in"><img src="images/IMG-20250626-WA0139.jpg" /></div>
+    <div class="gallery-item fade-in"><img src="images/IMG-20250620-WA0023.jpg" /></div>
+    <div class="gallery-item fade-in"><img src="images/IMG-20250620-WA0025.jpg" /></div>
+    <div class="gallery-item fade-in"><img src="images/Screenshot_27-6-2025_23616_.jpeg" /></div>
+    <div class="gallery-item fade-in"><img src="images/IMG-20250628-WA0008.jpg" /></div>
+    <div class="gallery-item fade-in"><img src="images/IMG-20250620-WA0022.jpg" /></div>
+    <div class="gallery-item fade-in"><img src="images/IMG-20250620-WA0021.jpg" /></div>
+    <div class="gallery-item fade-in"><img src="images/IMG-20250628-WA0007.jpg" /></div>
+    <div class="gallery-item fade-in"><img src="images/IMG-20250620-WA0018.jpg" /></div>
+  </div>
+</section>
+
+    <script>
+  const fadeIns = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  fadeIns.forEach(el => observer.observe(el));
+</script>
+
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
+
+  </body>
+</html>

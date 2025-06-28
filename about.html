@@ -9,42 +9,45 @@
     />
     <title>COLEDEFO</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="animation.css" />
   </head>
   <body>
     <!-- Header -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-<nav class="navbar">
-  <div class="logo">COLEDEFO</div>
+    <nav class="navbar">
+      <div class="logo">COLEDEFO</div>
 
-  <!-- Hamburger Icon (always visible) -->
-  <div class="menu-icon" id="menu-toggle">
-    <i class="fas fa-bars"></i>
-  </div>
+      <!-- Hamburger Icon (always visible) -->
+      <div class="menu-icon" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
 
-  <!-- Navigation Links -->
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="whatwedo.html">What We Do</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="whatwedo.html">What We Do</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
 
     <!-- About Us Section -->
     <section class="about-us fade-in">
       <!-- Left Side: Video Thumbnail with YouTube Icon -->
       <div class="about-video">
-        <a href="https://youtu.be/W4CKN9AzzlQ" target="_blank">
-          <img
-            src="images/IMG-20250620-WA0026.jpg"
-            alt="About Us Video Thumbnail"
-            class="video-thumb"
-          />
-          <i class="fab fa-youtube youtube-icon"></i>
-        </a>
-      </div>
+  <div class="video-wrapper">
+    <video id="aboutVideo" class="video-thumb" poster="images/IMG-20250620-WA0026.jpg">
+      <source src="images/VID-20250628-WA0006.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <i class="fab fa-youtube youtube-icon" id="playIcon"></i>
+  </div>
+</div>
 
       <!-- Right Side: Write-Up -->
       <div class="about-text">
@@ -95,6 +98,66 @@
         </div>
       </div>
     </section>
+
+    <section class="our-goals" data-aos="zoom-in">
+      <div class="goals-container">
+        <h2>Our Goals</h2>
+
+        <div class="goal-box">
+          <div class="goal-content">
+            <h3>Goal #1 – Education</h3>
+            <p>
+              Education is a fundamental right and a powerful tool for
+              empowerment. Yet, millions of girls within our communities are
+              still out of school. Ensuring equal access to quality education
+              for all girls is essential for building a brighter future.
+              Educated women are more likely to participate in the workforce,
+              make informed decisions, and contribute to their communities.
+            </p>
+          </div>
+        </div>
+
+        <div class="goal-box">
+          <div class="goal-content">
+            <h3>Goal #2 – Healthcare</h3>
+            <p>
+              Access to healthcare services, including reproductive health, is
+              crucial for women’s well-being and autonomy. Addressing health
+              disparities and ensuring access to comprehensive healthcare can
+              significantly improve the quality of life for women. This includes
+              access to maternal healthcare, family planning services, and
+              mental health support.
+            </p>
+          </div>
+        </div>
+
+        <div class="goal-box">
+          <div class="goal-content">
+            <h3>Goal #3 – Economic Opportunities</h3>
+            <p>
+              Economic empowerment enables women to achieve financial
+              independence and contribute to their communities. Promoting
+              women’s participation in the workforce, supporting
+              entrepreneurship, and ensuring equal pay for equal work are vital
+              steps toward bridging the gender gap in economic opportunities.
+            </p>
+          </div>
+        </div>
+
+        <div class="goal-box">
+          <div class="goal-content">
+            <h3>Goal #4 – Political Representation</h3>
+            <p>
+              Women's voices must be heard in decision-making processes at all
+              levels. Encouraging women's political participation, supporting
+              female leadership, and ensuring gender equality in governance are
+              vital steps toward a more inclusive society.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer Section -->
     <footer class="site-footer">
       <div class="footer-container">
@@ -127,20 +190,6 @@
             When you give, 85% of every dollar goes straight to our mission.
             Find out more.
           </p>
-          <div class="trust-logos">
-            <img
-              src="images/charity-navigator-sm-logo.png.webp"
-              alt="Charity Navigator Logo"
-            />
-            <img
-              src="images/charity-watch-sm-logo_0.png.webp"
-              alt="Charity Watch Logo"
-            />
-            <img
-              src="images/xk6e3lajnf7g1228h2k36r1ejg0bb8j7.svg"
-              alt="BBB Logo"
-            />
-          </div>
         </div>
       </div>
 
@@ -153,28 +202,48 @@
     </footer>
 
     <script>
-  const toggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
+      const toggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
 
-  toggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-</script>
-
-<script>
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
+      toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
       });
-    },
-    { threshold: 0.1 }
-  );
+    </script>
 
-  document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      document
+        .querySelectorAll(".fade-in")
+        .forEach((el) => observer.observe(el));
+    </script>
+
+    <script>
+  const video = document.getElementById("aboutVideo");
+  const playIcon = document.getElementById("playIcon");
+
+  playIcon.addEventListener("click", () => {
+    video.play();
+    playIcon.style.display = "none";
+  });
+
+  // Optional: Hide icon again if user clicks video
+  video.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+      playIcon.style.display = "none";
+    }
+  });
 </script>
 
   </body>
