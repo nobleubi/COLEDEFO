@@ -387,20 +387,51 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .site-footer {
+    padding: 40px 15px 20px;
+  }
+
   .footer-container {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    gap: 25px;
   }
 
   .footer-left,
   .footer-right {
+    text-align: center;
     flex: 1 1 100%;
   }
 
+  .footer-left h3,
+  .footer-right h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-links li {
+    margin-bottom: 5px;
+  }
+
+  .footer-links a,
+  .contact-info p,
+  .footer-right p {
+    font-size: 0.85rem;
+  }
+
   .donate-btn {
-    margin-top: 15px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+    padding-top: 15px;
+    margin-top: 30px;
   }
 }
+
 
 /* About Us Section remains same as before except this: */
 
