@@ -35,7 +35,7 @@
 </nav>
 
     <!-- What We Do Section -->
-    <section class="what-we-do" data-aos="fade-up">
+    <section class="what-we-do" data-animate>
       <h2>Fulfilling Our Mission</h2>
 
       <p class="mission-text">
@@ -57,7 +57,7 @@
     </section>
 
     <!-- Extra What We Do Section -->
-    <section class="we-do-extra" data-aos="fade-right">
+    <section class="we-do-extra" data-animate>
       <div class="we-do-container">
         <div class="we-do-text">
           <h2>OUR TRACK RECORD</h2>
@@ -94,9 +94,9 @@
     </section>
 
     <!-- Why What We Do Matters Section -->
-    <section class="why-we-do" data-aos="fade-left">
+    <section class="why-we-do" data-animate>
       <div class="why-container">
-        <div class="why-text">
+        <div class="why-text" data-animate-slide>
           <h2>PARTNERSHIP INVOLVEMENT</h2>
           <p>
             COLEDEFO is committed to championing the rights and opportunities of
@@ -133,7 +133,7 @@
       </div>
     </section>
 
-    <section class="milestones-section" data-aos="fade-up">
+    <section class="milestones-section" data-animate>
       <div class="milestones-container">
         <h2>Our Milestones</h2>
 
@@ -168,47 +168,34 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="site-footer">
-      <div class="footer-container">
-        <!-- Left Column: Links + Contact + Donate -->
-        <div class="footer-left">
-          <ul class="footer-links">
-            <li>
-              <a href="about.html" class="footer-link learn-more">Learn More</a>
-            </li>
-            <li><a href="about.html" class="footer-link">About Us</a></li>
-            <li><a href="whatwedo.html" class="footer-link">What We Do</a></li>
-            <li><a href="contact.html" class="footer-link">Contact</a></li>
-          </ul>
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Left: Quick Links -->
+    <div class="footer-column quick-links">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="about.html" class="footer-link">About Us</a></li>
+        <li><a href="whatwedo.html" class="footer-link">What We Do</a></li>
+        <li><a href="contact.html" class="footer-link">Contact</a></li>
+        <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+        <li><a href="#" class="footer-link">Donate Now</a></li>
+      </ul>
+    </div>
 
-          <a href="#" class="donate-btn">Donate Now</a>
+    <!-- Right: Contact Info -->
+    <div class="footer-column contact-info">
+      <h4>Contact Us</h4>
+      <p>Plot 7, Didi Mall, Sikiru Adewale Street, Sangotedo</p>
+      <p>Main Office: 0703 194 4092 || +234 803 455 2049</p>
+      <p>Email: info@coledefo.org</p>
+    </div>
+  </div>
 
-          <div class="contact-info">
-            <a href="#" class="footer-link contact-link">Contact Us</a>
-            <p>Plot 7, Didi Mall, Sikiru Adewale Street, Sangotedo</p>
-            <p>Main Office: 0703 194 4092 | Mon-Fri 9:00am-5:00pm EST</p>
-            <p>Report fraud, abuse, wrongdoing</p>
-            <p>Safeguarding</p>
-          </div>
-        </div>
+  <div class="footer-bottom">
+    <p>© 2024 Concerned Ladies Empowerment and Development Forum. All rights reserved.</p>
+  </div>
+</footer>
 
-        <!-- Right Column: Trust & Certifications -->
-        <div class="footer-right">
-          <p class="trust-heading">An Organization You Can Trust</p>
-          <p>
-            When you give, 85% of every penny goes straight to our mission.
-            Find out more.
-          </p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>
-          © 2024 Concerned Ladies Empowerment And Development Forum, Inc.
-          501(c)(3). Gifts deductible as per IRS regulations.
-        </p>
-      </div>
-    </footer>
 
     <script>
   const toggle = document.getElementById("menu-toggle");
@@ -219,14 +206,21 @@
   });
 </script>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init({
-    duration: 1000,
-    easing: 'ease-in-out',
-    once: true
-  });
+  const elements = document.querySelectorAll('[data-animate]');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(el => observer.observe(el));
 </script>
+
 
   </body>
 </html>

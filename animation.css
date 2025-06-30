@@ -234,7 +234,15 @@
   transform: scale(1.05);
 }
 
-[data-aos] {
-  transition-property: opacity, transform;
+[data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
+[data-animate].animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 

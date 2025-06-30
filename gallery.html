@@ -106,26 +106,68 @@
     </section>
 
     <section class="image-gallery">
-  <h2>Moments in Action</h2>
-  <div class="gallery-grid">
-    <div class="gallery-item fade-in"><img src="images/IMG-20250626-WA0140.jpg" /></div>
-    <div class="gallery-item fade-in"><img src="images/IMG-20250626-WA0141.jpg" /></div>
-    <div class="gallery-item fade-in"><img src="images/IMG-20250626-WA0142.jpg" /></div>
-    <div class="gallery-item fade-in"><img src="images/IMG-20250626-WA0143.jpg" /></div>
-    <div class="gallery-item fade-in"><img src="images/IMG-20250626-WA0144.jpg" /></div>
-    <div class="gallery-item fade-in"><img src="images/IMG-20250620-WA0028.jpg" /></div>
-    <div class="gallery-item fade-in"><img src="images/IMG-20250628-WA0010.jpg" /></div>
-    <div class="gallery-item fade-in"><img src="images/IMG-20250626-WA0139.jpg" /></div>
-    <div class="gallery-item fade-in"><img src="images/IMG-20250620-WA0023.jpg" /></div>
-    <div class="gallery-item fade-in"><img src="images/IMG-20250620-WA0025.jpg" /></div>
-    <div class="gallery-item fade-in"><img src="images/Screenshot_27-6-2025_23616_.jpeg" /></div>
-    <div class="gallery-item fade-in"><img src="images/IMG-20250628-WA0008.jpg" /></div>
-    <div class="gallery-item fade-in"><img src="images/IMG-20250620-WA0022.jpg" /></div>
-    <div class="gallery-item fade-in"><img src="images/IMG-20250620-WA0021.jpg" /></div>
-    <div class="gallery-item fade-in"><img src="images/IMG-20250628-WA0007.jpg" /></div>
-    <div class="gallery-item fade-in"><img src="images/IMG-20250620-WA0018.jpg" /></div>
+      <h2>Moments in Action</h2>
+      <div class="gallery-grid">
+      <div class="gallery-item fade-in"><img src="images/IMG-20250626-WA0140.jpg" /></div>
+      <div class="gallery-item fade-in"><img src="images/IMG-20250626-WA0141.jpg" /></div>
+      <div class="gallery-item fade-in"><img src="images/IMG-20250626-WA0142.jpg" /></div>
+      <div class="gallery-item fade-in"><img src="images/IMG-20250626-WA0143.jpg" /></div>
+      <div class="gallery-item fade-in"><img src="images/IMG-20250626-WA0144.jpg" /></div>
+      <div class="gallery-item fade-in"><img src="images/IMG-20250620-WA0028.jpg" /></div>
+      <div class="gallery-item fade-in"><img src="images/IMG-20250628-WA0010.jpg" /></div>
+      <div class="gallery-item fade-in"><img src="images/IMG-20250626-WA0139.jpg" /></div>
+      <div class="gallery-item fade-in"><img src="images/IMG-20250620-WA0023.jpg" /></div>
+      <div class="gallery-item fade-in"><img src="images/IMG-20250620-WA0025.jpg" /></div>
+      <div class="gallery-item fade-in"><img src="images/Screenshot_27-6-2025_23616_.jpeg" /></div>
+      <div class="gallery-item fade-in"><img src="images/IMG-20250628-WA0008.jpg" /></div>
+      <div class="gallery-item fade-in"><img src="images/IMG-20250620-WA0022.jpg" /></div>
+      <div class="gallery-item fade-in"><img src="images/IMG-20250620-WA0021.jpg" /></div>
+      <div class="gallery-item fade-in"><img src="images/IMG-20250628-WA0007.jpg" /></div>
+      <div class="gallery-item fade-in"><img src="images/IMG-20250620-WA0018.jpg" /></div>
+      <div class="gallery-item video-item">
+  <video src="images/VID-20250628-WA0014.mp4" poster="images/IMG-20250626-WA0141.jpg" controls></video>
+  <div class="play-overlay">
+    <i class="fas fa-play-circle"></i>
   </div>
-</section>
+</div>
+      <div class="gallery-item video-item">
+  <video src="images/VID-20250628-WA0015.mp4" poster="images/IMG-20250626-WA0140.jpg" controls></video>
+  <div class="play-overlay">
+    <i class="fas fa-play-circle"></i>
+  </div>
+</div>
+
+      </div>
+    </section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Left: Quick Links -->
+    <div class="footer-column quick-links">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="about.html" class="footer-link">About Us</a></li>
+        <li><a href="whatwedo.html" class="footer-link">What We Do</a></li>
+        <li><a href="contact.html" class="footer-link">Contact</a></li>
+        <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+        <li><a href="#" class="footer-link">Donate Now</a></li>
+      </ul>
+    </div>
+
+    <!-- Right: Contact Info -->
+    <div class="footer-column contact-info">
+      <h4>Contact Us</h4>
+      <p>Plot 7, Didi Mall, Sikiru Adewale Street, Sangotedo</p>
+      <p>Main Office: 0703 194 4092 || +234 803 455 2049</p>
+      <p>Email: info@coledefo.org</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 Concerned Ladies Empowerment and Development Forum. All rights reserved.</p>
+  </div>
+</footer>
+
 
     <script>
   const fadeIns = document.querySelectorAll('.fade-in');
@@ -151,6 +193,17 @@
     navLinks.classList.toggle("active");
   });
 </script>
+
+<script>
+  document.querySelectorAll(".video-item").forEach(item => {
+    item.addEventListener("click", () => {
+      const video = item.querySelector("video");
+      video.play();
+      video.setAttribute("controls", "true");
+    });
+  });
+</script>
+
 
 
   </body>
