@@ -402,6 +402,23 @@ body {
 }
 
 
+.footer-socials {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.footer-socials a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.3rem;
+  color: #cbd5e1;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #ffffff;
+}
+
 
 
 
