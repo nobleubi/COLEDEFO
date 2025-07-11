@@ -235,35 +235,37 @@ body {
   margin: 0;
 }
 
-/* Container for each mission block */
+/* Mission Gallery layout */
 .mission-gallery {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
+  gap: 40px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-/* Each block like a post */
+/* Default (Mobile First) stacked layout */
 .mission-item {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-/* Image fills full width and height auto */
+/* Image full width on mobile */
 .mission-item img {
-  display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
-  max-height: 500px;
 }
 
-/* Text section below image */
+/* Text box styling */
 .text-box {
   padding: 20px;
+  text-align: left;
 }
 
 .text-box p {
@@ -286,6 +288,42 @@ body {
 
 .toggle-btn:hover {
   background-color: #12285d;
+}
+
+/* ======== DESKTOP LANDSCAPE STYLE ======== */
+@media (min-width: 769px) {
+  .mission-gallery {
+    gap: 30px;
+  }
+
+  .mission-item {
+    flex-direction: row;
+    align-items: stretch;
+    height: 320px;
+  }
+
+  .mission-item img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .text-box {
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .text-box p {
+    font-size: 1.05rem;
+  }
+
+  .toggle-btn {
+    align-self: flex-start;
+    margin-top: 10px;
+  }
 }
 
 /* Responsive */
