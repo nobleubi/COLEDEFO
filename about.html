@@ -1,252 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>COLEDEFO</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="animation.css" />
-  </head>
-  <body>
-    <!-- Header -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <nav class="navbar">
-      <div class="logo">COLEDEFO</div>
+  <title>About COLEDEFO</title>
 
-      <!-- Hamburger Icon (always visible) -->
-      <div class="menu-icon" id="menu-toggle">
-        <i class="fas fa-bars"></i>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- PAGE TRANSITION -->
+  <div id="page-transition"></div>
+
+  <!-- HEADER -->
+  <nav class="navbar">
+    <div class="logo">COLEDEFO</div>
+
+    <div class="menu-icon" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="whatwedo.html">What We Do</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <!-- ABOUT US -->
+  <section class="about-us" data-gsap="fade">
+    <div class="about-video" data-gsap="scale">
+      <div class="video-wrapper">
+        <video
+          id="aboutVideo"
+          class="video-thumb"
+          poster="images/IMG-20250620-WA0026.jpg"
+        >
+          <source src="images/VID-20250628-WA0006.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <i class="fab fa-youtube youtube-icon" id="playIcon"></i>
       </div>
+    </div>
 
-      <!-- Navigation Links -->
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="whatwedo.html">What We Do</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-      </ul>
-    </nav>
+    <div class="about-text" data-gsap="right">
+      <h2>ABOUT COLEDEFO</h2>
+      <p>
+        Women empowerment has been a long-standing issue, with which many
+        women around the world are facing challenges. Despite significant
+        progress in recent decades, disparities still exist in areas such as
+        education, healthcare, economic participation, and political
+        representation.
+        <br /><br />
+        We at COLEDEFO have bridged this barrier through empowerment with skill
+        acquisition and trainings. Our concerns for the development of women
+        and the girl child are based on long-term benefits and results that are
+        proving to be beneficial globally.
+      </p>
+      <a href="#" class="donate-header-btns">Donate</a>
+    </div>
+  </section>
 
-    <!-- About Us Section -->
-    <section class="about-us fade-in">
-      <!-- Left Side: Video Thumbnail with YouTube Icon -->
-      <div class="about-video">
-  <div class="video-wrapper">
-    <video id="aboutVideo" class="video-thumb" poster="images/IMG-20250620-WA0026.jpg">
-      <source src="images/VID-20250628-WA0006.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <i class="fab fa-youtube youtube-icon" id="playIcon"></i>
-  </div>
-</div>
+  <!-- MISSION & VISION -->
+  <section class="our-mission-vision" data-gsap="fade">
+    <h2><strong>Our Mission and Vision</strong></h2>
 
-      <!-- Right Side: Write-Up -->
-      <div class="about-text">
-        <h2>ABOUT COLEDEFO</h2>
+    <div class="mission-vision-container">
+      <div class="mission" data-gsap="left">
+        <h3>Our Mission</h3>
         <p>
-          Women empowerment has been a long-standing issue, with which many
-          women around the world are facing challenges. Despite significant
-          progress in recent decades, disparities still exist in areas such as
-          education, healthcare, economic participation, and political
-          representation. In many communities, cultural norms and systemic
-          barriers continue to limit women's potential. For example, in many
-          parts of the world, girls still have limited access to quality
-          education, and women are underrepresented in leadership roles across
-          various sectors. We at COLEDEFO have bridged this barrier through
-          empowerment with skill acquisition and trainings. Our concerns for the
-          development of women and the girl child are based on long-term
-          benefits and results that are proving to be beneficial and profitable
-          globally. It's without reservation that the population of the female
-          gender is greater than the male counterpart, which cannot be
-          emphasized. Hence, the unending need to increase and intensify efforts
-          aimed at contributing our quota to the global agenda of empowering our
-          women in society.
-        </p>
-        <a href="#" class="donate-header-btns">Donate</a>
-      </div>
-    </section>
-
-    <!-- Our Values Section -->
-    <section class="our-mission-vision fade-in">
-      <h2><strong>Our Mission and Vision</strong></h2>
-      <div class="mission-vision-container">
-        <div class="mission fade-in">
-          <h3>Our Mission</h3>
-          <p>
-            We are a charity organisation whose sole purpose of existence is to
-            liberate women and the girl child from poverty in our immediate
-            communities, state, and the country at large.
-          </p>
-        </div>
-        <div class="vision fade-in">
-          <h3>Our Vision</h3>
-          <p>
-            Our vision at COLEDEFO is to be at the forefront of selfless
-            services, innovative, technology-driven, and sustainable programs
-            with best global practices aimed at alleviating poverty among women
-            and the girl child.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="our-goals" data-aos="zoom-in">
-      <div class="goals-container">
-        <h2>Our Goals</h2>
-
-        <div class="goal-box">
-          <div class="goal-content">
-            <h3>Goal #1 – Education</h3>
-            <p>
-              Education is a fundamental right and a powerful tool for
-              empowerment. Yet, millions of girls within our communities are
-              still out of school. Ensuring equal access to quality education
-              for all girls is essential for building a brighter future.
-              Educated women are more likely to participate in the workforce,
-              make informed decisions, and contribute to their communities.
-            </p>
-          </div>
-        </div>
-
-        <div class="goal-box">
-          <div class="goal-content">
-            <h3>Goal #2 – Healthcare</h3>
-            <p>
-              Access to healthcare services, including reproductive health, is
-              crucial for women’s well-being and autonomy. Addressing health
-              disparities and ensuring access to comprehensive healthcare can
-              significantly improve the quality of life for women. This includes
-              access to maternal healthcare, family planning services, and
-              mental health support.
-            </p>
-          </div>
-        </div>
-
-        <div class="goal-box">
-          <div class="goal-content">
-            <h3>Goal #3 – Economic Opportunities</h3>
-            <p>
-              Economic empowerment enables women to achieve financial
-              independence and contribute to their communities. Promoting
-              women’s participation in the workforce, supporting
-              entrepreneurship, and ensuring equal pay for equal work are vital
-              steps toward bridging the gender gap in economic opportunities.
-            </p>
-          </div>
-        </div>
-
-        <div class="goal-box">
-          <div class="goal-content">
-            <h3>Goal #4 – Political Representation</h3>
-            <p>
-              Women's voices must be heard in decision-making processes at all
-              levels. Encouraging women's political participation, supporting
-              female leadership, and ensuring gender equality in governance are
-              vital steps toward a more inclusive society.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="site-footer">
-      <div class="footer-container">
-        <!-- Left: Quick Links -->
-        <div class="footer-column quick-links">
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="about.html" class="footer-link">About Us</a></li>
-            <li><a href="whatwedo.html" class="footer-link">What We Do</a></li>
-            <li><a href="contact.html" class="footer-link">Contact</a></li>
-            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
-            <li><a href="#" class="footer-link">Donate Now</a></li>
-          </ul>
-        </div>
-
-        <!-- Right: Contact Info -->
-        <div class="footer-column contact-info">
-          <h4>Contact Us</h4>
-          <p>Plot 7, Didi Mall, Sikiru Adewale Street, opposite Shoprite Sangotedo</p>
-          <p>Main Office: 0703 194 4092 || +234 803 455 2049</p>
-          <p>Email: info@coledefo.com</p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>
-          © 2024 Concerned Ladies Empowerment and Development Forum. All rights
-          reserved.
+          We are a charity organisation whose sole purpose is to liberate women
+          and the girl child from poverty in our communities and beyond.
         </p>
       </div>
-      <!-- Social Media Links -->
-<div class="footer-socials">
-  <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-  <a href="https://x.com" target="_blank" aria-label="X (Twitter)">
-    <i class="fab fa-x-twitter"></i>
-  </a>
-  <a href="https://www.instagram.com/concernedladies?igsh=YzljYTk1ODg3Zg==" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-</div>
-    </footer>
 
+      <div class="vision" data-gsap="right">
+        <h3>Our Vision</h3>
+        <p>
+          To be at the forefront of selfless services, innovative and
+          sustainable programs with global best practices.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <script>
-      const toggle = document.getElementById("menu-toggle");
-      const navLinks = document.getElementById("nav-links");
+  <!-- GOALS -->
+  <section class="our-goals">
+    <div class="goals-container">
+      <h2 data-gsap="fade">Our Goals</h2>
 
-      toggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-      });
-    </script>
+      <div class="goal-box" data-gsap="stagger">
+        <div class="goal-content">
+          <h3>Goal #1 – Education</h3>
+          <p>Ensuring equal access to quality education for girls.</p>
+        </div>
+      </div>
 
-    <script>
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
+      <div class="goal-box" data-gsap="stagger">
+        <div class="goal-content">
+          <h3>Goal #2 – Healthcare</h3>
+          <p>Access to healthcare services including maternal health.</p>
+        </div>
+      </div>
 
-      document
-        .querySelectorAll(".fade-in")
-        .forEach((el) => observer.observe(el));
-    </script>
+      <div class="goal-box" data-gsap="stagger">
+        <div class="goal-content">
+          <h3>Goal #3 – Economic Opportunities</h3>
+          <p>Promoting entrepreneurship and financial independence.</p>
+        </div>
+      </div>
 
-    <script>
-  const video = document.getElementById("aboutVideo");
-  const playIcon = document.getElementById("playIcon");
+      <div class="goal-box" data-gsap="stagger">
+        <div class="goal-content">
+          <h3>Goal #4 – Political Representation</h3>
+          <p>Encouraging women’s leadership and participation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  playIcon.addEventListener("click", () => {
-    video.play();
-    playIcon.style.display = "none";
-  });
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column quick-links">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="whatwedo.html">What We Do</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
 
-  // Optional: Hide icon again if user clicks video
-  video.addEventListener("click", () => {
-    if (video.paused) {
+      <div class="footer-column contact-info">
+        <h4>Contact Us</h4>
+        <p>Plot 7, Didi Mall, Sangotedo</p>
+        <p>0703 194 4092 | +234 803 455 2049</p>
+        <p>Email: info@coledefo.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2024 Concerned Ladies Empowerment and Development Forum
+    </div>
+  </footer>
+
+  <!-- MENU -->
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+
+  <!-- VIDEO -->
+  <script>
+    const video = document.getElementById("aboutVideo");
+    const playIcon = document.getElementById("playIcon");
+
+    playIcon.addEventListener("click", () => {
       video.play();
       playIcon.style.display = "none";
-    }
-  });
-</script>
+    });
 
-  </body>
+    video.addEventListener("click", () => {
+      if (video.paused) {
+        video.play();
+        playIcon.style.display = "none";
+      }
+    });
+  </script>
+
+  <!-- GSAP (ALWAYS LAST) -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="gsap.js"></script>
+
+</body>
 </html>
+
