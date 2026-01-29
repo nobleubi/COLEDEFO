@@ -1060,4 +1060,27 @@ body {
     border-radius: 10px;
   }
 }
+/* ===== FIX: ABOUT VIDEO SIDE-BY-SIDE LAYOUT ===== */
+.about-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 80px 10%;
+}
+
+/* Ensure video & text split evenly */
+.about-video,
+.about-text {
+  flex: 1;
+}
+
+/* Keep mobile behavior EXACTLY as you already defined */
+@media (max-width: 768px) {
+  .about-us {
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+  }
+}
 
