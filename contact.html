@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>COLEDEFO</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Header -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <title>COLEDEFO | Contact</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+<!-- NAVBAR -->
 <nav class="navbar">
   <div class="logo">COLEDEFO</div>
 
-  <!-- Hamburger Icon (always visible) -->
   <div class="menu-icon" id="menu-toggle">
     <i class="fas fa-bars"></i>
   </div>
 
-  <!-- Navigation Links -->
   <ul class="nav-links" id="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About Us</a></li>
@@ -32,74 +32,60 @@
   </ul>
 </nav>
 
-<!-- modify this form HTML and place wherever you want your form -->
+<!-- CONTACT SECTION -->
 <section class="contact-section">
-<form
-  action="https://formspree.io/f/myzjrzla"
-  method="POST"
-class="contact-form"
->
-<label>
-    Your Name:
-    <input type="name" name="Name" required>
-  </label>
-  <label>
-    Your Email:
-    <input type="email" name="email" required>
-  </label>
-  <label>
-    Your Message:
-    <textarea name="message" required></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+  <form
+    action="https://formspree.io/f/myzjrzla"
+    method="POST"
+    class="contact-form"
+  >
+    <label>
+      Your Name:
+      <input type="text" name="name" required />
+    </label>
+
+    <label>
+      Your Email:
+      <input type="email" name="email" required />
+    </label>
+
+    <label>
+      Your Message:
+      <textarea name="message" required></textarea>
+    </label>
+
+    <button type="submit">Send</button>
+  </form>
 </section>
 
-    <footer class="site-footer">
-      <div class="footer-container">
-        <!-- Left: Quick Links -->
-        <div class="footer-column quick-links">
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="about.html" class="footer-link">About Us</a></li>
-            <li><a href="whatwedo.html" class="footer-link">What We Do</a></li>
-            <li><a href="contact.html" class="footer-link">Contact</a></li>
-            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
-            <li><a href="#" class="footer-link">Donate Now</a></li>
-          </ul>
-        </div>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
 
-        <!-- Right: Contact Info -->
-        <div class="footer-column contact-info">
-          <h4>Contact Us</h4>
-          <p>Plot 7, Didi Mall, Sikiru Adewale Street,opposite Shoprite Sangotedo</p>
-          <p>Main Office: 0703 194 4092 || +234 803 455 2049</p>
-          <p>Email: info@coledefo.com</p>
-        </div>
-      </div>
+    <div class="footer-column quick-links">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="whatwedo.html">What We Do</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
 
-      <div class="footer-bottom">
-        <p>
-          © 2024 Concerned Ladies Empowerment and Development Forum. All rights
-          reserved.
-        </p>
-      </div>
-      <!-- Social Media Links -->
-<div class="footer-socials">
-  <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-  <a href="https://x.com" target="_blank" aria-label="X (Twitter)">
-    <i class="fab fa-x-twitter"></i>
-  </a>
-  <a href="https://www.instagram.com/concernedladies?igsh=YzljYTk1ODg3Zg==" target="_blank" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-</div>
-    </footer>
+    <div class="footer-column contact-info">
+      <h4>Contact Us</h4>
+      <p>Plot 7, Didi Mall, Sangotedo</p>
+      <p>0703 194 4092</p>
+      <p>Email: info@coledefo.com</p>
+    </div>
+  </div>
 
+  <div class="footer-bottom">
+    <p>© 2024 COLEDEFO. All rights reserved.</p>
+  </div>
+</footer>
 
+<!-- NAV TOGGLE -->
 <script>
   const toggle = document.getElementById("menu-toggle");
   const navLinks = document.getElementById("nav-links");
@@ -109,5 +95,24 @@ class="contact-form"
   });
 </script>
 
-    </body>
+<!-- GSAP -->
+<script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".contact-form", {
+    y: 70,
+    scale: 0.95,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".contact-form",
+      start: "top 85%"
+    }
+  });
+</script>
+
+</body>
 </html>
