@@ -4,15 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <title>COLEDEFO</title>
+    <title>COLEDEFO | What We Do</title>
 
-    <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="animation.css" />
 
@@ -106,6 +104,7 @@
     <section class="milestones-section" data-animate>
       <div class="milestones-container">
         <h2>Our Milestones</h2>
+
         <p>
           Concerned Ladies Empowerment and Development Forum has made a strong
           impact across Nigeria.
@@ -139,7 +138,7 @@
       </div>
     </footer>
 
-    <!-- MENU SCRIPT -->
+    <!-- MENU -->
     <script>
       const toggle = document.getElementById("menu-toggle");
       const navLinks = document.getElementById("nav-links");
@@ -167,27 +166,6 @@
             start: "top 85%"
           }
         });
-      });
-
-      gsap.from(".mission-text, .extra-text, .why-text p", {
-        opacity: 0,
-        y: 40,
-        stagger: 0.15,
-        duration: 0.8,
-        scrollTrigger: {
-          trigger: ".what-we-do",
-          start: "top 80%"
-        }
-      });
-
-      gsap.from(".we-do-image img, .why-image img", {
-        opacity: 0,
-        scale: 0.95,
-        duration: 1,
-        scrollTrigger: {
-          trigger: ".we-do-container",
-          start: "top 85%"
-        }
       });
     </script>
   </body>
