@@ -148,25 +148,25 @@
     </script>
 
     <!-- GSAP -->
-    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
-    <!-- GSAP SCROLL ANIMATIONS -->
-    <script>
-      gsap.registerPlugin(ScrollTrigger);
+<script>
+  gsap.registerPlugin(ScrollTrigger);
 
-      gsap.utils.toArray("[data-animate]").forEach(section => {
-        gsap.from(section, {
-          opacity: 0,
-          y: 60,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 85%"
-          }
-        });
-      });
-    </script>
+  gsap.utils.toArray("[data-animate]").forEach(el => {
+    gsap.from(el, {
+      opacity: 0,
+      y: 40,
+      duration: 0.8,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%"
+      }
+    });
+  });
+</script>
+
   </body>
 </html>
