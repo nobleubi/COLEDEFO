@@ -245,4 +245,12 @@
   transform: translateY(0);
 }
 
+/* ==== FORCE VISIBILITY FALLBACK (CRITICAL FIX) ==== */
+[data-animate],
+.fade-in,
+.animated {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
 
